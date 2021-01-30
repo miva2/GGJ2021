@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct KeyCollection
+static class KeyCollection
 {
-    public bool KeyW;
-    public bool KeyA;
-    public bool KeyS;
-    public bool KeyD;
-    public bool KeySpace;
-    public bool KeyQ;
-    public bool KeyE;
-    public bool KeyQuestionMark;
-    public bool KeyEnter;
-    
-    
-
+    public static bool KeyW; 
+    public static bool KeyA;
+    public static bool KeyS;
+    public static bool KeyD;
+    public static bool KeySpace;
+    public static bool KeyQ;
+    public static bool KeyE;
+    public static bool KeyQuestionMark;
+    public static bool KeyEnter;
 }
