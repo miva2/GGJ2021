@@ -8,16 +8,17 @@ public class SceneManager : MonoBehaviour
     
     private void Start()
     {
-        collectedKeys.Add(KeyboardKey.W, KeyboardAction.Jump);
-        collectedKeys.Add(KeyboardKey.A, KeyboardAction.MoveLeft);
-        collectedKeys.Add(KeyboardKey.S, KeyboardAction.MoveDown);
-        collectedKeys.Add(KeyboardKey.D, KeyboardAction.MoveRight);
+        // collectedKeys.Add(KeyboardKey.W, KeyboardAction.UNDEFINED);
+        // collectedKeys.Add(KeyboardKey.A, KeyboardAction.UNDEFINED);
+        // collectedKeys.Add(KeyboardKey.S, KeyboardAction.UNDEFINED);
+        collectedKeys.Add(KeyboardKey.D, KeyboardAction.UNDEFINED);
 
     }
     
-    public void ItemPickedUp()
+    public void KeyboardKeyPickedUp(KeyboardKeyItem item)
     {
-        
+        Debug.Log($"item {item} added to collection!");
+        collectedKeys.Add(item.keyboardKey, KeyboardAction.UNDEFINED);
     }
     
     public bool IsKeyObtained(KeyboardKey key)

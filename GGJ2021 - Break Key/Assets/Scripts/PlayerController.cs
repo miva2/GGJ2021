@@ -1,6 +1,4 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,13 +19,20 @@ public class PlayerController : MonoBehaviour
         CheckItemPickup(other);
     }
 
-    private void CheckItemPickup(Collider2D collider)
+    private void CheckItemPickup(Collider2D itemCollider)
     {
-        if (collider.gameObject.CompareTag("Item"))
+        if (itemCollider.gameObject.CompareTag("Item"))
         {
             //pick up the item
             Debug.Log("Item detected");
-            Item item = collider.gameObject.GetComponent<KeyboardKeyItem>(); //TODO: will only work for keyboard items, search for Item if more items implemented 
+            Item item = itemCollider.gameObject.GetComponent<KeyboardKeyItem>(); //TODO: will only work for keyboard items, search for Item if more items implemented 
+            if (item is KeyboardKeyItem keyItem)
+            {
+                sceneManager.KeyboardKeyPickedUp(keyItem);
+                //actually i could have put this in the item itself, whatever if it works
+            }
+
+            
             item.OnPickUp(gameObject);
         }
     }

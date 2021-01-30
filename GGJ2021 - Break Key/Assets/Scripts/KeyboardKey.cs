@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum KeyboardKey
 {
-    W, A, S, D, Space, Q, E, QuestionMark, Enter
+    UNSET, W, A, S, D, Space, Q, E, QuestionMark, Enter
 }

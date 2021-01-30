@@ -4,5 +4,6 @@ using UnityEngine;
 
 public enum KeyboardAction
 {
-    Jump, MoveLeft, MoveRight, MoveDown, Attack
+    //Actions are not used yet. currently hardcoded
+    UNDEFINED, Jump, MoveLeft, MoveRight, MoveDown, Attack
 }

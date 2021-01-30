@@ -462,6 +462,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1592026159}
     m_Modifications:
+    - target: {fileID: 5368427212108263124, guid: 06736b5ffa246c045a6b7d9e40d8a5a1, type: 3}
+      propertyPath: keyboardKey
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5368427212108263126, guid: 06736b5ffa246c045a6b7d9e40d8a5a1, type: 3}
       propertyPath: m_Name
       value: KeyA
