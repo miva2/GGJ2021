@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour // TODO: rename to PlayerController instead of PlayerMovement
+public class PlayerController : MonoBehaviour
 {
     public SceneManager sceneManager;
     
