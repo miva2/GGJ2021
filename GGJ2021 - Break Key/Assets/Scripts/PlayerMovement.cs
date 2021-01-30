@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour // TODO: rename to PlayerController instead of PlayerMovement
 {
+    public SceneManager sceneManager;
+    
     public float playerMovementSpeed = 5f;
     public float jumpSpeed = 8f;
 
@@ -32,7 +34,7 @@ public class PlayerMovement : MonoBehaviour // TODO: rename to PlayerController 
 
     private void CheckMovement()
     { // maybe move to different class, or leave it... doesn't matter
-        if (KeyCollection.KeyW)
+        if (sceneManager.KeyObtained(KeyboardKey.W))
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -41,7 +43,7 @@ public class PlayerMovement : MonoBehaviour // TODO: rename to PlayerController 
             }
         }
 
-        if (KeyCollection.KeyA)
+        if (sceneManager.KeyObtained(KeyboardKey.A))
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -50,7 +52,7 @@ public class PlayerMovement : MonoBehaviour // TODO: rename to PlayerController 
             }
         }
 
-        if (KeyCollection.KeyS)
+        if (sceneManager.KeyObtained(KeyboardKey.S))
         {
             if (Input.GetKey(KeyCode.S))
             {
@@ -58,7 +60,7 @@ public class PlayerMovement : MonoBehaviour // TODO: rename to PlayerController 
             }
         }
 
-        if (KeyCollection.KeyD)
+        if (sceneManager.KeyObtained(KeyboardKey.D))
         {
             if (Input.GetKey(KeyCode.D))
             {
