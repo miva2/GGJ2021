@@ -2,31 +2,54 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour // TODO: rename to PlayerController instead of PlayerMovement
 {
     public float playerMovementSpeed = 5f;
     public float jumpSpeed = 8f;
 
     void Update()
     {
+        CheckMovement();
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Collision detected!");
+        CheckItemPickup(other);
+    }
+
+    private void CheckItemPickup(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Item"))
+        {
+            //pick up the item
+            Debug.Log("Item detected");
+            Item item = collider.gameObject.GetComponent<KeyboardKeyItem>(); //TODO: will only work for keyboard items, search for Item if more items implemented 
+            item.OnPickUp(gameObject);
+        }
+    }
+
+    private void CheckMovement()
+    { // maybe move to different class, or leave it... doesn't matter
         if (KeyCollection.KeyW)
         {
             if (Input.GetKey(KeyCode.W))
             {
                 //jump, apply gravity
-                Debug.Log("JUMP!");
                 transform.Translate(0f, jumpSpeed * Time.deltaTime, 0f);
             }
         }
+
         if (KeyCollection.KeyA)
         {
             if (Input.GetKey(KeyCode.A))
             {
                 //move left
-                Debug.Log("Moving left");
-                transform.Translate(-playerMovementSpeed * Time.deltaTime, 0f, 0f);    
+                transform.Translate(-playerMovementSpeed * Time.deltaTime, 0f, 0f);
             }
         }
+
         if (KeyCollection.KeyS)
         {
             if (Input.GetKey(KeyCode.S))
@@ -34,15 +57,14 @@ public class PlayerMovement : MonoBehaviour
                 // go down if necessary
             }
         }
+
         if (KeyCollection.KeyD)
         {
             if (Input.GetKey(KeyCode.D))
             {
                 //move right
-                Debug.Log("Moving right");
-                transform.Translate(playerMovementSpeed * Time.deltaTime, 0f, 0f);    
+                transform.Translate(playerMovementSpeed * Time.deltaTime, 0f, 0f);
             }
         }
     }
-    
 }
