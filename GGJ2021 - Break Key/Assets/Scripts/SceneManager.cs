@@ -20,7 +20,7 @@ public class SceneManager : MonoBehaviour
         
     }
     
-    public bool KeyObtained(KeyboardKey key)
+    public bool IsKeyObtained(KeyboardKey key)
     {
         return collectedKeys.ContainsKey(key);
     }

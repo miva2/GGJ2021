@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckMovement()
     { // maybe move to different class, or leave it... doesn't matter
-        if (sceneManager.KeyObtained(KeyboardKey.W))
+        if (sceneManager.IsKeyObtained(KeyboardKey.W))
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (sceneManager.KeyObtained(KeyboardKey.A))
+        if (sceneManager.IsKeyObtained(KeyboardKey.A))
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (sceneManager.KeyObtained(KeyboardKey.S))
+        if (sceneManager.IsKeyObtained(KeyboardKey.S))
         {
             if (Input.GetKey(KeyCode.S))
             {
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (sceneManager.KeyObtained(KeyboardKey.D))
+        if (sceneManager.IsKeyObtained(KeyboardKey.D))
         {
             if (Input.GetKey(KeyCode.D))
             {
