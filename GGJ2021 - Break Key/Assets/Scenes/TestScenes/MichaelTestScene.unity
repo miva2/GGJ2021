@@ -464,7 +464,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5368427212108263124, guid: 06736b5ffa246c045a6b7d9e40d8a5a1, type: 3}
       propertyPath: keyboardKey
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5368427212108263126, guid: 06736b5ffa246c045a6b7d9e40d8a5a1, type: 3}
       propertyPath: m_Name
@@ -476,11 +476,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5368427212108263127, guid: 06736b5ffa246c045a6b7d9e40d8a5a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5368427212108263127, guid: 06736b5ffa246c045a6b7d9e40d8a5a1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5368427212108263127, guid: 06736b5ffa246c045a6b7d9e40d8a5a1, type: 3}
       propertyPath: m_LocalPosition.z
