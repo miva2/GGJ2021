@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    public Toast toast;
+    
     private Dictionary<KeyboardKey, KeyboardAction> collectedKeys = new Dictionary<KeyboardKey, KeyboardAction>();
     
     private void Start()
@@ -18,7 +20,8 @@ public class SceneManager : MonoBehaviour
     public void KeyboardKeyPickedUp(KeyboardKeyItem item)
     {
         Debug.Log($"item {item} added to collection!");
-        collectedKeys.Add(item.keyboardKey, KeyboardAction.UNDEFINED);
+        collectedKeys.Add(item.keyboardKey, KeyboardAction.UNDEFINED); // KeyboardActions are not supported yet
+        toast.ShowToast($"KEY {item.keyboardKey} picked up!");
     }
     
     public bool IsKeyObtained(KeyboardKey key)
