@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SceneManager : MonoBehaviour
+public class AlleySceneManager : MonoBehaviour
 {
     public GameObject player;
     public Camera camera;
@@ -29,7 +29,7 @@ public class SceneManager : MonoBehaviour
     {
         if (!startAnimationPerformed)
         {
-            player.transform.Translate(-4.3f, 0.5f, 0f);
+            player.transform.Translate(-4.2f, 0.5f, 0f);
             startAnimationPerformed = true;
         }
     }

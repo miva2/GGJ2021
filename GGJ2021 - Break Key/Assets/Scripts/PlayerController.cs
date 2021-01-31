@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
-    public SceneManager sceneManager;
+    [FormerlySerializedAs("sceneManager")] public AlleySceneManager alleySceneManager;
     
     public float playerMovementSpeed = 5f;
     public float jumpSpeed = 8f;
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
             Item item = itemCollider.gameObject.GetComponent<KeyboardKeyItem>(); //TODO: will only work for keyboard items, search for Item if more items implemented 
             if (item is KeyboardKeyItem keyItem)
             {
-                sceneManager.KeyboardKeyPickedUp(keyItem);
+                alleySceneManager.KeyboardKeyPickedUp(keyItem);
                 //actually i could have put this in the item itself, whatever if it works
             }
 
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckMovement()
     { // maybe move to different class, or leave it... doesn't matter
-        if (sceneManager.IsKeyObtained(KeyboardKey.W))
+        if (alleySceneManager.IsKeyObtained(KeyboardKey.W))
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (sceneManager.IsKeyObtained(KeyboardKey.A))
+        if (alleySceneManager.IsKeyObtained(KeyboardKey.A))
         {
             if (Input.GetKey(KeyCode.A))
             {
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (sceneManager.IsKeyObtained(KeyboardKey.S))
+        if (alleySceneManager.IsKeyObtained(KeyboardKey.S))
         {
             if (Input.GetKey(KeyCode.S))
             {
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (sceneManager.IsKeyObtained(KeyboardKey.D))
+        if (alleySceneManager.IsKeyObtained(KeyboardKey.D))
         {
             if (Input.GetKey(KeyCode.D))
             {
