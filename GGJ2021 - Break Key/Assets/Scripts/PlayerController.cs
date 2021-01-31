@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
             {
                 //jump, apply gravity
-                transform.Translate(0f, jumpSpeed * Time.deltaTime, 0f);
+                transform.Translate(0f, jumpSpeed * Time.deltaTime, 0f); // really need a better jump
             }
         }
 
