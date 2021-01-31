@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         CheckMovement();
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
