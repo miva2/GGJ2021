@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,16 +8,40 @@ public class PlayerController : MonoBehaviour
     public float playerMovementSpeed = 5f;
     public float jumpSpeed = 8f;
 
+    private bool grounded;
     void Update()
     {
         CheckMovement();
         
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log($"collision detected with tag:{other.gameObject.tag}");
+        CheckGrounded(other);
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        Debug.Log("exiting collision");
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            grounded = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Collision detected!");
+        // Debug.Log("Collision detected!");
         CheckItemPickup(other);
+    }
+
+    private void CheckGrounded(Collision2D collider)
+    {
+        if (collider.gameObject.CompareTag("Ground"))
+        {
+            grounded = true;
+        }
     }
 
     private void CheckItemPickup(Collider2D itemCollider)
@@ -43,8 +68,13 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                //jump, apply gravity
-                transform.Translate(0f, jumpSpeed * Time.deltaTime, 0f);
+                Debug.Log($"Grounded value: {grounded}");
+                if (grounded)
+                {
+                    //jump, apply gravity
+                    transform.Translate(0f, jumpSpeed * Time.deltaTime, 0f);    
+                }
+                
             }
         }
 
