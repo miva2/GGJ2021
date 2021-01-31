@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: b8768ab1ae1d3f14b90077d4d89b2f52
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1843150451258247575
+    second: KeyboardWASD_0
+  - first:
+      213: 7550672597112811350
+    second: KeyboardWASD_1
+  - first:
+      213: 6737256463041290541
+    second: KeyboardWASD_2
+  - first:
+      213: 4362701735042562375
+    second: KeyboardWASD_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +53,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +87,105 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: KeyboardWASD_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79949dae19f249910800000000000000
+      internalID: 1843150451258247575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardWASD_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f6f2ec8b069c860800000000000000
+      internalID: 7550672597112811350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardWASD_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21e740ce0b8f7d50800000000000000
+      internalID: 6737256463041290541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardWASD_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749313a0d1e6b8c30800000000000000
+      internalID: 4362701735042562375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
