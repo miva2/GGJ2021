@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AlleySceneManager : MonoBehaviour
@@ -10,7 +11,8 @@ public class AlleySceneManager : MonoBehaviour
     public Camera camera;
     public Toast toast;
     public KeyboardKeyUI[] keyCollection;
-
+    public int numberOfKeysToCollect;
+    
     private bool startAnimationPerformed = false;
     private Dictionary<KeyboardKey, KeyboardAction> collectedKeys = new Dictionary<KeyboardKey, KeyboardAction>();
     
@@ -31,6 +33,14 @@ public class AlleySceneManager : MonoBehaviour
         {
             player.transform.Translate(-4.2f, 0.5f, 0f);
             startAnimationPerformed = true;
+        }
+    }
+
+    private void CheckAllKeysCollected()
+    {
+        if (collectedKeys.Keys.Count.Equals(numberOfKeysToCollect))
+        {
+            SceneManager.LoadScene("Scenes/TheEnd");
         }
     }
 
@@ -56,6 +66,8 @@ public class AlleySceneManager : MonoBehaviour
                 key.gameObject.GetComponent<Image>().enabled = true;
             }
         } // This can probably shorter and cleaner but don't know it in C#. Check it later :D 
+        
+        CheckAllKeysCollected();
     }
     
     public bool IsKeyObtained(KeyboardKey key)

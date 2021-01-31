@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alley.unity
     guid: 76e0c12d1983a5e4dbb0a66653979f43
+  - enabled: 1
+    path: Assets/Scenes/TheEnd.unity
+    guid: a11dc1ee955dfcc4abaf07e657c13799
   m_configObjects: {}

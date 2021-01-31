@@ -68073,6 +68073,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 868092962}
     - target: {fileID: 5334060908312833094, guid: c695eaf6cd18c6c4fa71308d16c91d6e, type: 3}
+      propertyPath: numberOfKeysToCollect
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334060908312833094, guid: c695eaf6cd18c6c4fa71308d16c91d6e, type: 3}
       propertyPath: keyCollection.Array.size
       value: 5
       objectReference: {fileID: 0}
